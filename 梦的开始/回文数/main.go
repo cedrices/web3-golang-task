@@ -1,12 +1,26 @@
-package task1
+package main
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
 
+func main() {
+
+	//是不是回文数
+	var param int64 = -121
+	result2 := verifyPalindrome(param)
+	if result2 {
+		fmt.Println(param, "是回文数")
+	} else {
+		fmt.Println(param, "不是回文数")
+	}
+
+}
+
 // 判断是否是回文
-func VerifyPalindrome(param int64) bool {
+func verifyPalindrome(param int64) bool {
 	str := strconv.FormatInt(param, 10)
 	var newStr strings.Builder
 	strArray := []rune(str)

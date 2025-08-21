@@ -1,7 +1,19 @@
-package task1
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	//有效的括号
+	result3 := isValidParent("([]){}") // 测试括号匹配
+	fmt.Println("括号匹配结果：", result3)
+
+}
 
 // 有效的括号
-func IsValidParent(s string) bool {
+func isValidParent(s string) bool {
 	stack := []rune{}
 	bracketMap := map[rune]rune{
 		')': '(',
