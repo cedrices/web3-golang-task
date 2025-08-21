@@ -13,7 +13,7 @@ func VerifyPalindrome(param int64) bool {
 	for i := len(strArray) - 1; i > -1; i-- {
 		newStr.WriteRune(strArray[i])
 	}
-	if newStr.String() == str {
+	if strings.EqualFold(newStr.String(), str) {
 		return true
 	}
 	return false
