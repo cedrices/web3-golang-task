@@ -20,4 +20,8 @@ func main() {
 	} else {
 		fmt.Println(param, "不是回文数")
 	}
+
+	//括号匹配
+	result3 := task1.IsValidParent("([]){}") // 测试括号匹配
+	fmt.Println("括号匹配结果：", result3)
 }
