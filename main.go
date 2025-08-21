@@ -8,10 +8,16 @@ import (
 
 func main() {
 	//只出现一次的数字
-	// arrays := [11]int{1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5}
-	// result := task1.ArrayFindSingle(arrays)
-	// fmt.Println(result)
-	// fmt.Println("Hello World!")
-	var result = task1.VerifyPalindrome(-121)
-	fmt.Println(result)
+	arrays := [11]int{1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5}
+	result1 := task1.ArrayFindSingle(arrays)
+	fmt.Println("只出现一次的数字是：", result1)
+
+	//是不是回文数
+	var param int64 = -121
+	result2 := task1.VerifyPalindrome(param)
+	if result2 {
+		fmt.Println(param, "是回文数")
+	} else {
+		fmt.Println(param, "不是回文数")
+	}
 }
